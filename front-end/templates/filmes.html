@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueflix - Filmes</title>
+    <link rel="stylesheet" href="../css/filmes.css">
+</head>
+<body>
+    <footer class="menu-footer">
+        <nav class="footer-nav">
+          <ul>
+            <li>
+              <a href="./index.html">
+                <img src="../img/blueflix-logo.png" alt="" id="logo">
+              </a>
+            </li>
+            <li>
+              <a href="./index.html">
+                Início
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Filmes
+              </a>
+            </li>
+            <li class="plus">
+              <a href="#">
+                <img class="img-normal" src="../img/plus.png">
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+      
+      <div class="container-table">
+        <div class="content">
+            <div id="formulario" class="formulario">
+                <div>
+                    <form onsubmit='postFilmes(event)'' id="add-filmes">
+                        <div id="title">
+                            <h1 id="title-form">Adicionar Filme</h1>
+                            <a class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="container-form">
+                            <div class="input_div">
+                                <h3> Título </h3>
+                                <input class="input_form" id="nomefilme" type="text" name="name" placeholder="Título do Filme"
+                                value="" required>
+                            </div>
+                            <div class="input_div">
+                                <h3> Imagem </h3>
+                                <input class="input_form" id="urlImagem" type="text" name="url" placeholder="Digite a URL da imagem..."
+                                value="" required>
+                            </div>
+                            <div class="input_div">
+                                <h3>Gênero</h3>
+                                <select class="input_form" id="genero" type="text" name="genero" value="" required>
+                                  <option value="Ação">Ação</option>
+                                  <option value="Anime">Anime</option>
+                                  <option value="Aventura">Aventura</option>
+                                  <option value="Comédia">Comédia</option>
+                                  <option value="Comédia Romântica">Comédia Romântica</option>
+                                  <option value="Documentário">Documentário</option>
+                                  <option value="Drama">Drama</option>
+                                  <option value="Ficção Científica">Ficção Científica</option>
+                                  <option value="Horror">Horror</option>
+                                  <option value="Infantil">Infantil</option>
+                                  <option value="Musical">Musical</option>
+                                  <option value="Policial">Policial</option>
+                                  <option value="Romance">Romance</option>
+                                  <option value="Super-Herói">Super-Herói</option>
+                                  <option value="Suspense">Suspense</option>
+                                  <option value="Terror">Terror</option>
+                                  </select>
+                            </div>
+                             <div class="input_div">
+                                <h3> Descrição</h3>
+                                <input class="input_form" id="descricao" type="textarea" name="descricao" placeholder="Sinopse...">
+                            </div>
+                             <div class="input_div">
+                               <h3> Assistido: </h3>
+                               <select class="input_form" name="assistido" id="assistido">
+                                 <option value="true">Sim</option>
+                                 <option value="false">Não</option>
+                               </select> 
+                        </div>
+                        <div class="input_div">
+                          <h3>Nota</h3>
+                          <select class="input_form" id="nota" type="text" name="nota" value="" required>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          </select>
+                      </div>
+                        <button class="send-buttons" type="submit" name="action" value="create"> enviar </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <section id="titulo">
+        <h2> Filmes Online </h2>
+      </section>
+      <section id="catalogo">
+        <ul class="cards" id="movie">
+            </ul>
+      </section>
+<script src="../js/index.js"></script>
+<script src="../js/formulario.js"></script>
+</body>
+</html>
